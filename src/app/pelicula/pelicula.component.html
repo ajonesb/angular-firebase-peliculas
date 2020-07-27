@@ -1,0 +1,92 @@
+<div class="row components-wrap">
+  <div class="col-sm-12 col-md-12 col-lg-2 pelicula-component-wrap">
+    <p style="color: white; font-weight: bold;">
+      Editar O Añadir Nueva Pelicula:
+    </p>
+    <form [formGroup]="this.peliculaService.form" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key" />
+
+      <div class="form-group">
+        <mat-form-field>
+          <input style="color: white;" matInput formControlName="Id" class="form-control" [ngClass]="{
+              'is-invalid': submitted && formControls.Id.errors
+            }" />
+          <mat-placeholder style="color: white;">ID</mat-placeholder>
+          <div class="invalid-feedback" *ngIf="submitted && formControls.Id.errors">
+            This field is required
+          </div>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <input style="color: white;" matInput formControlName="fullName" class="form-control" [ngClass]="{
+              'is-invalid': submitted && formControls.fullName.errors
+            }" />
+          <mat-placeholder style="color: white;">Nombre</mat-placeholder>
+          <div class="invalid-feedback" *ngIf="submitted && formControls.Id.errors">
+            This field is required
+          </div>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <!-- <mat-form-field>
+          <input 
+          style="color: white;" 
+          matInput formControlName="datePicker" 
+          class="form-control" 
+          [ngClass]="{
+              'is-invalid': submitted && formControls.datePicker.errors
+            }" 
+            />
+          <mat-placeholder style="color: white;">F. Publicacion</mat-placeholder>
+          <div class="invalid-feedback" *ngIf="submitted && formControls.datePicker.errors">
+            This field is required
+          </div>
+        </mat-form-field> -->
+
+        <mat-form-field>
+          <input 
+          style="color: white!important;" 
+          matInput [matDatepicker]="picker" 
+          placeholder="F. Publicacion" 
+          formControlName="datePicker"
+          class="form-control" 
+          [ngClass]="{
+              'is-invalid': submitted && formControls.datePicker.errors
+            }"
+          >
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <div class="invalid-feedback" *ngIf="submitted && formControls.datePicker.errors">
+            This field is required
+          </div>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">    
+        <mat-form-field>
+          <input style="color: white;" 
+          matInput formControlName="estado" 
+          class="form-control" />
+          <mat-placeholder style="color: white;">Estado</mat-placeholder>
+        </mat-form-field>
+        
+      </div> 
+
+      
+
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </div>
+    </form>
+    <div class="alert alert-info" *ngIf="showSuccessMessage">
+      Submitted successfully.
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-12 col-lg-9 pelicula-list-component-wrap">
+    <app-pelicula-list></app-pelicula-list>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.home-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 20px !important;
+    margin: 20px 10px 2px;
+    font-size: 20px !important;
+    text-align: center;
+  }
+}

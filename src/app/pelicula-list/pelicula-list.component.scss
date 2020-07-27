@@ -1,0 +1,24 @@
+.table{    
+     color: white !important;
+     
+     tr {      
+        color: white !important; 
+        padding: 20px; 
+     }
+} 
+
+.table-sm td, .table-sm th {
+    padding: 19px 12px;
+}
+
+@media (min-width: 780px) {
+    .search-close-x {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .search-close-x {
+        margin: 0px;
+    }
+}

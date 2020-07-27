@@ -1,0 +1,49 @@
+<mat-sidenav-container style="background: none;" class="sidenav-container">
+  <mat-sidenav 
+      #drawer 
+      class="sidenav"
+      fixedInViewport="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/Dashboard">Dashboard</a>
+      <a mat-list-item href="/Peliculas">Peliculas</a>
+      <a mat-list-item href="/Turnos">Turnos</a>
+      <a mat-list-item href="/Administradores">Administradores</a>
+      <a mat-list-item href="/Perfil">Perfil</a>
+      <a mat-list-item href="/Perfil">Cerrar Sesion</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div id="site-logo">
+          <a href="http://jonesfrontendwebdev.com/" rel="home">
+            <img src="http://jonesfrontendwebdev.com/wp-content/uploads/2018/05/cropped-cropped-smalllogo-1.png" alt="Alan Jones – UI Front End Engineer">
+          </a>
+      </div>
+      <span class="spacer"></span>
+      <div class="desktop-nav">
+        <a href="/Dashboard">Dashboard</a>
+        <a href="/Peliculas">Peliculas</a>
+        <a href="/Turnos">Turnos</a>
+        <a href="/Administradores">Administradores</a>
+        <a href="/Perfil">Perfil</a>
+        <a href="/Perfil">Cerrar Sesion</a>
+      </div>
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

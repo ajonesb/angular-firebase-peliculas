@@ -1,0 +1,51 @@
+.pelicula-component-wrap {
+	background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0 !important;
+	opacity: 0.9;
+	box-shadow: 2px 4px 58px -20px black;
+	border: 1px solid lightgray;
+	margin: 0px 10px;
+	min-width: 20%;
+    padding: 30px;
+    
+
+    @media (max-width: 768px) {
+        margin: 30px 0px;
+        padding: 20px 40px;
+    }
+}
+.pelicula-list-component-wrap {
+	background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0 !important;
+	opacity: 0.9;
+	box-shadow: 2px 4px 58px -20px black;
+	border: 1px solid lightgray;
+	margin: 0px 10px;
+	padding: 30px;
+}
+.home-title {
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFF;
+	position: relative;
+	text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+// Disable Form control from Bootstrap
+.form-control {
+	padding: 0px !important;
+	border: 0px !important;
+	margin: 0px !important;
+	background: none !important;
+	border-radius: 0px !important;
+	top: 0px !important;
+	bottom: 0px !important;
+	outline: none !important;
+	box-shadow: none !important;
+	height: 17px !important;
+	transition: none !important;
+}
+@media (max-width: 768px) {
+	.home-title {
+		font-size: 25px !important;
+	}
+}

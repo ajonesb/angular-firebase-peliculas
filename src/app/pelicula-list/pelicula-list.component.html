@@ -1,0 +1,57 @@
+<div>
+  <form class="mb-5 form-inline">
+    <mat-form-field style="width: 90%;">
+      <input
+        matInput
+        name="searchInput"
+        #searchInput="ngModel"
+        [(ngModel)]="searchText"
+        style="width: 100%;"
+      />
+      <mat-placeholder style="color: white;">Buscar Peliculas</mat-placeholder>
+    </mat-form-field>
+    <button
+      class="btn btn-outline-primary search-close-x"
+      (click)="searchText = ''"
+    >
+      X
+    </button>
+  </form>
+  <p style="color: white; font-weight: bold;">Listado de Pelicula:</p>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>F. Publicacion</th>
+        <th>Estado</th>
+        <th>Edit / Delete</th>
+      </thead>
+      <ng-container *ngFor="let pelicula of peliculaArray">
+        <tr *ngIf="filterCondition(pelicula)">
+          <td>{{ pelicula.Id }}</td>
+          <td>{{ pelicula.fullName }}</td>
+          <td>{{ pelicula.datePicker }}</td>
+          <td>{{ pelicula.estado }}</td> 
+          <td>
+            <button
+              class="btn btn-outline-info"
+              (click)="peliculaService.populateForm(pelicula)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-outline-danger"
+              (click)="onDelete(pelicula.$key)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+      <div class="alert alert-danger" *ngIf="showDeleteMessage">
+        Deleted successfully.
+      </div>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+/* To use for Angular Material */
+
+html,
+body {
+  height: 100%;
+  background: url(https://cdn.hipwallpaper.com/i/40/88/1u9qKj.png) no-repeat
+    fixed top left;
+  background-color: #ff0000;
+  background-size: cover;
+  color: #ffffff;
+  margin-top: 123px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  z-index: 2;
+}
+
+.mat-form-field-infix {
+  color: white !important;
+}
+
+.mat-form-field-placeholder {
+  color: white !important;
+}
+
+.mat-form-field-underline {
+  background-color: white !important;
+}
+
+.mat-datepicker-toggle-default-icon {
+  color: white!important;
+}
+
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    transform: perspective(100px);
+    -ms-transform: none;
+    color: white!important;
+}
+
+.mat-form-field-underline.mat-disabled {
+  background-color: transparent !important;
+}
+
+.components-wrap {
+  background: none !important;
+}

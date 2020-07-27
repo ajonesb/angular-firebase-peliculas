@@ -1,0 +1,95 @@
+.mat-card {
+   color: black!important; 
+}
+
+.login-text {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFF;
+    position: relative;
+    text-shadow: 6px 6px 8px rgba(0,0,0,0.3);
+}
+
+.login-container .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: rgb(58, 58, 58)!important;
+}
+
+button {
+    margin: auto;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+    margin:0px;
+    background-color: transparent !important;
+}
+
+.app-header{
+    background-color: #0095da;
+    text-align: center;
+    padding: 1%;
+}
+ 
+.login-container {
+    max-width: 500px;
+    height: auto;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0!important;
+    opacity: 0.9;
+    box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+    border: 1px solid lightgray;
+    margin: 5em auto;
+}
+ 
+.login-box-header{
+	width: auto;
+    height: 26%;
+    opacity: 0.9;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3em;
+    padding: 4%;
+    color: #fff;
+}
+
+.mat-card .mat-form-field-infix {
+    color: rgb(56, 56, 56)!important;
+}
+
+.login-token {
+    border: none;
+}
+
+input.mat-input-element {
+    margin-top: 10px 0px;
+}
+ 
+.login-box-body{
+	width: auto;
+	height:100%;
+	padding: 25px;
+	color: rgba(0,0,0,.54);
+}
+ 
+.login-icon{
+	margin-top: -2px;
+}
+ 
+.login-button{
+	width: 100%;
+	padding:1.5% !important;	
+    background-color: #274350;
+    font-size: 1.5em;
+    color: #fff !important;
+}
+
+.abcRioButtonLightBlue {
+    width: 50%!important;
+    margin: 0px auto;
+    padding: 1px;
+}
+
+.login-element {
+    margin: 10px auto;
+}
