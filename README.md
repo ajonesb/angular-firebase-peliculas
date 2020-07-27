@@ -51,4 +51,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Demo 
-http://jonesfrontendwebdev.com/angular-firebase-peliculas/pelicula
+http://jonesfrontendwebdev.com/angular-firebase-peliculas/
